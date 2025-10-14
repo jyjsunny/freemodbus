@@ -124,6 +124,10 @@ eMBTCPReceive( UCHAR * pucRcvAddress, UCHAR ** ppucFrame, USHORT * pusLength )
              */
             *pucRcvAddress = MB_TCP_PSEUDO_ADDRESS;
         }
+        else
+        {
+            assert(usPID == MB_TCP_PROTOCOL_ID);
+        }
     }
     else
     {
